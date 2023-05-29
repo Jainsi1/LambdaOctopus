@@ -19,6 +19,6 @@ jobs:
          output_folder: './packaging'
          base_path: ./module/python
          files: |
-           **/*.*
+           *
     
         

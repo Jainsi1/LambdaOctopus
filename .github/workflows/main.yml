@@ -23,7 +23,7 @@ jobs:
           version: latest
       - name: Package the function
         run: |
-          octo pack --id="TestLambdaFunction" --format="Zip" --version="$PACKAGE_VERSION" --basePath="modules/python" --outFolder="$GITHUB_WORKSPACE/artifacts"
+          octo pack --id="TestLambdaFunction" --format="Zip" --version="$PACKAGE_VERSION" --basePath="module/python" --outFolder="$GITHUB_WORKSPACE/artifacts"
       - name: Push the packages
         uses: OctopusDeploy/push-package-action@v1
         with:

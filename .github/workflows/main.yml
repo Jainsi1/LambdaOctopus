@@ -1,0 +1,24 @@
+name: zip package and deploy to Octopus
+
+on:
+ workflow_dispatch:
+ 
+jobs:
+  lambda:
+    name: octopus deploy
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+        
+      - name: Create a Zip package 
+        uses: OctopusDeploy/create-zip-package-action@v3
+        with:
+         package_id: 'TestPackage'
+         version: '1.0.0'
+         output_folder: './packaging'
+         base_path: ./modules/python
+         files: |
+           **/*.*
+    
+        

@@ -16,8 +16,8 @@ jobs:
         with:
          package_id: 'TestPackage'
          version: '1.0.0'
-         output_folder: 'packaging'
-         base_path: ./module/python
+         output_folder: packaging
+         base_path: module/python/lambda_function.py
          files: |
            *
     
